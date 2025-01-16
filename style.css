@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    border: none;
+}
+
+:root {
+    --main-bg-color: rgb(28, 34, 48);
+    --second-bg-color: rgb(23, 31, 43);
+    --footer-bg-color: hsl(216, 53%, 9%);
+    --cyan: hsl(176, 68%, 64%);
+    --blue: hsl(198, 60%, 50%);
+    --testim-bg: hsl(219, 30%, 18%);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+html {
+    background: var(--second-bg-color);
+    /* background: navy; */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem;
+    background: var(--main-bg-color);
+}
+
+nav img {
+    height: 3rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul a {
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+    background: no-repeat bottom url(images/bg-curvy-desktop.svg) var(--main-bg-color);
+}
+
+main .main-content {
+    width: 100%;
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    text-align: center;
+}
+
+main img {
+    width: 100%;
+}
+
+main h1 {
+    line-height: 1.5;
+}
+
+main p {
+    padding: 0 50px;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+main .cta {
+    width: 275px;
+    padding: 20px 0;
+    
+    background: linear-gradient(90deg, var(--cyan), var(--blue));
+    border-radius: 40px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+main ~ section {
+    background-color: var(--second-bg-color);
+}
+
+.perks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 100px;
+    padding: 50px 20%;
+}
+
+.perks article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.perks article img {
+    margin-bottom: 20px;
+}
+
+.perks article h2 {
+    font-size: 1.2rem;
+}
+
+.perks article p {
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.demo {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 100px;
+}
+
+.demo img {
+    flex: 6;
+}
+
+.demo .demo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 5;
+    gap: 25px;
+}
+
+.demo-text p, .demo-text a {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.demo-button {
+    text-decoration: none;
+}
+
+.demo-button button {
+    background: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--cyan);
+}
+
+.demo-button button span {
+    color: var(--cyan);
+    font-size: 1rem;
+}
+
+.demo-button button:hover {
+    border-bottom: 1px solid white;
+}
+
+.demo-button button:hover span {
+    color: white;
+}
+
+.demo-button button:hover svg #circle, .demo-button button:hover svg #blur {
+    fill: white;
+}
+
+.testimonials {
+    display: flex;
+    gap: 40px;
+    margin: 100px;
+    position: relative;
+}
+
+.testimonial:last-child {
+    margin-right: 0;
+}
+
+.testimonial {
+    position: relative;
+    background: var(--testim-bg);
+    padding: 40px 25px;
+    width: 30%;
+    flex-direction: column;
+    box-shadow: 8px 8px 8px 0px #171f2b;
+    margin-right: 3%;
+}
+
+.testimonial p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.testimonial-footer img {
+    border-radius: 100%;
+    max-width: 25px;
+    float: left;
+    margin-right: 10px;
+}
+
+.testimonial-footer .name {
+    font-weight: bold;
+    font-size: 1rem;
+    display: block;
+}
+
+.testimonials > img {
+    position: absolute;
+    z-index: 1;
+    top: -50px;
+    left: -20px;
+}
+
+.testimonial .quotes-img {
+    position: absolute;
+    z-index: -1;
+    top: -36px;
+    left: -8px;
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(var(--second-bg-color) 50%, var(--footer-bg-color) 50%);
+    padding: 50px 0;
+}
+
+.register .wrapper {
+    width: 100%;
+    max-width: 860px;
+    background: var(--main-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 40px 80px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+}
+
+.register .wrapper h2 {
+    font-size: 2rem;
+}
+
+.register .wrapper p {
+    max-width: 80%;
+    text-align: center;
+    font-size: 0.8rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.register .wrapper .form-wrapper {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+}
+
+.register .wrapper .input-wrapper {
+    width: 100%;
+}
+
+.register .wrapper .form-wrapper input {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    color: black;
+    padding-left: 40px;
+}
+
+.register .wrapper .form-wrapper button {
+    width: 240px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 0.8rem;
+}
+
+.register .wrapper .form-wrapper .error-msg {
+    display: none;
+}
+
+footer {
+    background-color: var(--footer-bg-color);
+    padding: 80px;
+}
+
+footer .desc p {
+    font-size: 1rem;
+}
+
+.footer-wrapper > img {
+    width: 10rem;
+    margin-bottom: 40px;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-row > section:first-child {
+    width: 32%;
+    padding-right: 20px;
+}
+
+.footer-row > section {
+    display: inline-block;
+    width: 16%
+}
+
+.footer-row .desc .row, .footer-row .contact .row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-row .links a {
+    display: inline-block;
+    width: 45%;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-bottom: 25px;
+    text-wrap: nowrap;
+}
+
+.footer-row .social i {
+    font-size: 1.2rem;
+    margin-right: 20px;
+    border: 1px solid white;
+    width: 1.3rem;
+    height: 1.3rem;
+    padding: 10px;
+    border-radius: 20px;
+    box-sizing: content-box;
+    text-align: center;
+}
+
+.footer-row .social i:hover {
+    color: var(--cyan)
+}
+
+/********* COMPONENTS **********/
+.major-button {
+    width: 100%;
+    max-width: 275px;
+    height: 50px;
+    background: linear-gradient(90deg, var(--cyan), var(--blue));
+    border-radius: 40px;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.major-button:hover {
+    background: var(--cyan);
+    cursor: pointer;
+}
