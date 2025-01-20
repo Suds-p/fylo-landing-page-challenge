@@ -1,6 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-// Text shadow support solution from: https://www.hyperui.dev/blog/text-shadow-with-tailwindcss
-const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   content: ["./*.html"],
@@ -28,23 +26,9 @@ module.exports = {
       fontFamily: {
         heading: ["Raleway", "sans-serif"],
         sans: ["Open Sans", "sans-serif"]
-      },
-      textShadow: {
-        DEFAULT: "1px 0 0 currentColor"
       }
     },
   },
-  plugins: [
-    plugin(function ({ matchUtilities, theme }) {
-      matchUtilities(
-        {
-          'text-shadow': (value) => ({
-            textShadow: value,
-          }),
-        },
-        { values: theme('textShadow') }
-      )
-    }),
-  ],
+  plugins: [],
 }
 

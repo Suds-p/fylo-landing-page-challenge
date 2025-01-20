@@ -13,49 +13,64 @@
 
   <body class="bg-mainBg">
     <nav
-      class="flex items-center justify-between gap-10 bg-introBg p-8 pb-20 sm:p-11 md:p-20"
+      class="relative flex items-center justify-between bg-introBg p-8 sm:p-11 md:p-20"
     >
+      <!-- Logo Section -->
       <div class="w-1/2 min-[320px]:w-1/5 sm:w-2/5 md:w-2/3 lg:w-3/4 xl:w-4/5">
         <img class="h-5 sm:h-11" src="images/logo.svg" alt="Main Logo" />
       </div>
+
+      <!-- Hamburger Icon -->
+      <button
+        class="block text-white focus:outline-none sm:hidden"
+        id="menu-toggle"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-8 w-8"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+
+      <!-- Navigation Links -->
       <ul
-        class="flex w-1/2 justify-between min-[320px]:w-4/5 sm:w-3/5 md:w-1/3 lg:w-1/4 xl:w-1/5"
+        class="max-sm:menu-hidden absolute left-0 top-full w-full flex-col items-center gap-4 overflow-hidden bg-introBg sm:static sm:flex sm:w-auto sm:flex-row sm:gap-10 sm:bg-transparent sm:p-0 sm:pb-0"
+        id="menu"
       >
         <li class="text-center">
-          <a href="#"
-            ><span
-              class="absolute font-heading text-base hover:border-b hover:border-white hover:font-bold sm:text-2xl md:text-sm"
-              >Features</span
-            ></a
+          <a
+            href="#"
+            class="font-heading text-base hover:border-b hover:border-white hover:font-bold sm:text-2xl md:text-sm"
+            >Features</a
           >
-          <span class="invisible font-heading text-2xl md:text-sm"
-            >Features
-          </span>
         </li>
         <li class="text-center">
-          <a href="#"
-            ><span
-              class="absolute font-heading text-base hover:border-b hover:border-white hover:font-bold sm:text-2xl md:text-sm"
-              >Team</span
-            ></a
+          <a
+            href="#"
+            class="font-heading text-base hover:border-b hover:border-white hover:font-bold sm:text-2xl md:text-sm"
+            >Team</a
           >
-          <span class="invisible font-heading text-2xl md:text-sm">Team </span>
         </li>
         <li class="text-center">
-          <a href="#"
-            ><span
-              class="absolute font-heading text-base hover:border-b hover:border-white hover:font-bold sm:text-2xl md:text-sm"
-              >Sign In</span
-            ></a
+          <a
+            href="#"
+            class="font-heading text-base hover:border-b hover:border-white hover:font-bold sm:text-2xl md:text-sm"
+            >Sign In</a
           >
-          <span class="invisible font-heading text-2xl md:text-sm"
-            >Sign In
-          </span>
         </li>
       </ul>
     </nav>
     <main
-      class="shadow-introBottom0 sm:shadow-introBottom2 min-[720px]:shadow-introBottom3 min-[480px]:shadow-introBottom1 flex items-center justify-center bg-introBg bg-curvy-mobile bg-contain bg-center bg-no-repeat pb-20 md:bg-curvy-desktop md:bg-bottom md:shadow-none"
+      class="flex items-center justify-center bg-introBg bg-curvy-mobile bg-contain bg-center bg-no-repeat pb-20 shadow-introBottom0 min-[480px]:shadow-introBottom1 sm:shadow-introBottom2 md:bg-curvy-desktop md:bg-bottom md:shadow-none"
     >
       <div
         class="flex w-full flex-col items-center justify-center gap-12 px-[50px] text-center sm:px-[75px] md:max-w-[720px]"
@@ -213,7 +228,9 @@
         </div>
       </div>
     </section>
-    <section class="relative m-[12%] sm:m-24 mb-40 flex flex-col gap-10 md:flex-row">
+    <section
+      class="relative m-[12%] mb-40 flex flex-col gap-10 sm:m-24 md:flex-row"
+    >
       <article
         class="relative mr-[3%] flex flex-col bg-testBg p-6 pt-10 shadow-[8px_8px_8px_0px_#171f2b] md:w-[30%]"
       >
@@ -288,12 +305,14 @@
       class="flex justify-center bg-gradient-to-b from-mainBg from-50% to-footerBg to-50%"
     >
       <div
-        class="flex w-11/12 max-w-[860px] flex-col items-center justify-center gap-6 rounded-lg bg-introBg px-6 sm:px-10 py-10 shadow-[5px_5px_10px_0px_rgba(0,0,0,0.75)] md:px-20"
+        class="flex w-11/12 max-w-[860px] flex-col items-center justify-center gap-6 rounded-lg bg-introBg px-6 py-10 shadow-[5px_5px_10px_0px_rgba(0,0,0,0.75)] sm:px-10 md:px-20"
       >
-        <h2 class="font-heading text-xl sm:text-2xl font-bold md:text-4xl">
+        <h2 class="font-heading text-xl font-bold sm:text-2xl md:text-4xl">
           Get early access today
         </h2>
-        <p class="px-3 sm:px-5 text-center font-sans text-sm sm:text-xl md:max-w-[80%] md:text-xs">
+        <p
+          class="px-3 text-center font-sans text-sm sm:px-5 sm:text-xl md:max-w-[80%] md:text-xs"
+        >
           It only takes a minute to sign up and our free starter tier is
           extremely generous. If you have any questions, our support team would
           be happy to help you.
@@ -301,14 +320,14 @@
         <div class="flex w-full flex-col gap-4 sm:gap-8 md:flex-row">
           <div class="md:w-2/3">
             <input
-              class="h-12 sm:h-16 w-full rounded-full pl-8 text-sm text-black"
+              class="h-12 w-full rounded-full pl-8 text-sm text-black sm:h-16"
               type="email"
               placeholder="email@example.com"
             />
             <span class="hidden">Please enter a valid email address</span>
           </div>
           <button
-            class="h-12 sm:h-16 w-full rounded-full bg-gradient-to-r from-buttonCyan to-buttonBlue text-center font-heading text-base sm:text-xl font-bold hover:cursor-pointer hover:bg-hoverCyan hover:bg-none md:w-1/3 md:text-[0.8rem]"
+            class="h-12 w-full rounded-full bg-gradient-to-r from-buttonCyan to-buttonBlue text-center font-heading text-base font-bold hover:cursor-pointer hover:bg-hoverCyan hover:bg-none sm:h-16 sm:text-xl md:w-1/3 md:text-[0.8rem]"
           >
             Get Started For Free
           </button>
@@ -316,7 +335,11 @@
       </div>
     </section>
     <footer class="bg-footerBg p-20">
-      <img class="h-10 mb-10 sm:h-20 md:h-10" src="images/logo.svg" alt="Main logo" />
+      <img
+        class="mb-10 h-10 sm:h-20 md:h-10"
+        src="images/logo.svg"
+        alt="Main logo"
+      />
       <div class="footer-row flex flex-col justify-between gap-20 md:flex-row">
         <section class="desc inline-block pr-5 md:w-[32%]">
           <div class="relative mb-5 flex items-center gap-5">
@@ -356,53 +379,53 @@
 
         <section class="links flex flex-col gap-5 md:flex-row">
           <ul>
-            <li>
+            <li class="w-20">
               <a
-                class="mb-6 inline-block w-[45%] text-nowrap text-xl sm:text-2xl hover:font-bold md:text-base"
+                class="mb-6 inline-block text-nowrap text-xl hover:font-bold sm:text-2xl md:text-base"
                 href="#"
                 >About Us</a
               >
             </li>
-            <li>
+            <li class="w-20">
               <a
-                class="mb-6 inline-block w-[45%] text-nowrap text-xl sm:text-2xl hover:font-bold md:text-base"
+                class="mb-6 inline-block text-nowrap text-xl hover:font-bold sm:text-2xl md:text-base"
                 href="#"
                 >Jobs</a
               >
             </li>
-            <li>
+            <li class="w-20">
               <a
-                class="mb-6 inline-block w-[45%] text-nowrap text-xl sm:text-2xl hover:font-bold md:text-base"
+                class="mb-6 inline-block text-nowrap text-xl hover:font-bold sm:text-2xl md:text-base"
                 href="#"
                 >Press</a
               >
             </li>
-            <li>
+            <li class="w-20">
               <a
-                class="mb-6 inline-block w-[45%] text-nowrap text-xl sm:text-2xl hover:font-bold md:text-base"
+                class="mb-6 inline-block text-nowrap text-xl hover:font-bold sm:text-2xl md:text-base"
                 href="#"
                 >Blog</a
               >
             </li>
           </ul>
           <ul>
-            <li>
+            <li class="w-20">
               <a
-                class="mb-6 inline-block w-[45%] text-nowrap text-xl sm:text-2xl hover:font-bold md:text-base"
+                class="mb-6 inline-block text-nowrap text-xl hover:font-bold sm:text-2xl md:text-base"
                 href="#"
                 >Contact Us</a
               >
             </li>
-            <li>
+            <li class="w-20">
               <a
-                class="mb-6 inline-block w-[45%] text-nowrap text-xl sm:text-2xl hover:font-bold md:text-base"
+                class="mb-6 inline-block text-nowrap text-xl hover:font-bold sm:text-2xl md:text-base"
                 href="#"
                 >Terms</a
               >
             </li>
-            <li>
+            <li class="w-20">
               <a
-                class="mb-6 inline-block w-[45%] text-nowrap text-xl sm:text-2xl hover:font-bold md:text-base"
+                class="mb-6 inline-block text-nowrap text-xl hover:font-bold sm:text-2xl md:text-base"
                 href="#"
                 >Privacy</a
               >
@@ -428,5 +451,19 @@
         </section>
       </div>
     </footer>
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("menu");
+
+      menuToggle.addEventListener("click", () => {
+        if (menu.classList.contains("max-sm:menu-hidden")) {
+          menu.classList.remove("max-sm:menu-hidden");
+          menu.classList.add("max-sm:menu-visible");
+        } else {
+          menu.classList.add("max-sm:menu-hidden");
+          menu.classList.remove("max-sm:menu-visible");
+        }
+      });
+    </script>
   </body>
 </html>

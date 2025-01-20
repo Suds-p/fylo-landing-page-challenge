@@ -5,10 +5,9 @@
 @layer base {
     * {
         color: white;
-        --box-shadow-intro-bottom0: inset 0 -21rem 0 0 hsl(218 28% 13%);
-        --box-shadow-intro-bottom1: inset 0 -24rem 0 0 hsl(218 28% 13%);
-        --box-shadow-intro-bottom2: inset 0 -25rem 0 0 hsl(218 28% 13%);
-        --box-shadow-intro-bottom3: inset 0 -26rem 0 0 hsl(218 28% 13%);
+        --box-shadow-intro-bottom0: inset 0 -22rem 0 0 hsl(218 28% 13%);
+        --box-shadow-intro-bottom1: inset 0 -25rem 0 0 hsl(218 28% 13%);
+        --box-shadow-intro-bottom2: inset 0 -28rem 0 0 hsl(218 28% 13%);
     }
 
     :root {
@@ -19,5 +18,17 @@
         --blue: 198 60% 50%;
         --hover-cyan: 186.9 61.7% 72.35%;
         --testim-bg: 219 30% 18%;
+    }
+
+    ul.menu-hidden {
+        visibility: hidden;
+        height: 0;
+        transition: height 0.3s ease-out, visibility 0s 0.3s;
+    }
+        
+    ul.menu-visible {
+        visibility: visible;
+        height: 100px; /* Adjust based on your content */
+        transition: visibility 0s, height 0.3s ease-out;
     }
 }
