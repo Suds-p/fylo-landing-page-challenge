@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="output.css" />
     <script
       src="https://kit.fontawesome.com/58c6321104.js"
@@ -321,13 +327,15 @@
           <form class="flex w-full flex-col gap-4 sm:gap-8 md:flex-row">
             <div class="md:w-2/3">
               <input
-                class="peer h-12 w-full rounded-full pl-8 text-sm text-black 
-                    focus:outline-blue-500 focus:invalid:outline-red-500 sm:h-16"
+                class="peer h-12 w-full rounded-full pl-8 text-sm text-black focus:outline-blue-500 focus:invalid:outline-red-500 sm:h-16"
                 type="email"
                 placeholder="email@example.com"
                 required
               />
-              <span class="invisible peer-[.bad-input]:visible text-red-500 text-xs pl-8">Please enter a valid email address</span>
+              <span
+                class="invisible pl-8 text-xs text-red-500 peer-[.bad-input]:visible"
+                >Please enter a valid email address</span
+              >
             </div>
             <button
               class="h-12 w-full rounded-full bg-gradient-to-r from-buttonCyan to-buttonBlue text-center font-heading text-base font-bold hover:cursor-pointer hover:bg-hoverCyan hover:bg-none sm:h-16 sm:text-xl md:w-1/3 md:text-[0.8rem]"
@@ -472,14 +480,14 @@
 
       // Add input validation to email input
       const form = document.querySelector("form");
-      const emailInput = document.getElementsByTagName("input")[0]
+      const emailInput = document.getElementsByTagName("input")[0];
 
       form.onsubmit = (event) => {
         event.preventDefault();
         console.log("hi you submmited");
         emailInput.classList.remove("bad-input");
       };
-      
+
       emailInput.oninvalid = (event) => {
         event.preventDefault();
         console.log("bad email");
